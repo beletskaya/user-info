@@ -7,7 +7,7 @@
       </div>
       <div class="home__form__description__wrap">
         <p>description</p>
-        <form>
+        <form @submit.prevent="applyForm">
           <div class="home__form__description__wrap-input">
             <input type="text" placeholder="Username" v-model="name" @keydown="isLetter($event)" required>
           </div>
@@ -15,7 +15,7 @@
             <input type="number" placeholder="Phone Number" v-model="phone" required>
           </div>
           <div class="home__form__description__wrap-input">
-            <button @click.prevent="applyForm" :class="{'load': load}">Register</button>
+            <button type="submit" :class="{'load': load}">Register</button>
           </div>
           <p v-if="loginError" class="home__form__description__wrap-error">Login error</p>
         </form>
