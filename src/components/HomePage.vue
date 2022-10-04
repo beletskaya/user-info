@@ -2,6 +2,11 @@
   <div class="header"></div>
   <div class="home">
     <div class="home__form">
+      <div class="home__example">
+        <p>Data for login:</p>
+        Login:  Glenna Reichert <br>
+        Phone: 7759766794
+      </div>
       <div class="home__form__description">
         description
       </div>
@@ -150,6 +155,12 @@ export default {
           }
         }
       }
+    }
+    &__example {
+      margin-bottom: 25px;
+      color: #dfdfdf;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 </style>
