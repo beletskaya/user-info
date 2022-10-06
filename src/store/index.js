@@ -91,7 +91,7 @@ export default createStore({
                     return data.data
                 })
             } catch (error) {
-                console.error(error)
+               return error
             }
         },
         getToDoList(context) {
@@ -103,7 +103,7 @@ export default createStore({
                     context.commit('GET_LIST', data.data)
                 })
             } catch (error) {
-                console.error(error)
+                return error
             }
         },
         postList(context, item) {
@@ -128,7 +128,7 @@ export default createStore({
                     context.commit('ADD_FAVORITES_LOCALSTORAGE', objData);
                 })
             } catch (error) {
-                console.error(error)
+                return error
             }
         }
     }
